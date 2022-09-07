@@ -3,7 +3,9 @@ import { createGlobalStyle } from "styled-components";
 export const breakpoints = { tablet: "600px" };
 
 export default createGlobalStyle`
-  
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Holtwood+One+SC&display=swap');
+
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
     a, abbr, acronym, address, big, cite, code,
@@ -17,6 +19,9 @@ export default createGlobalStyle`
     figure, figcaption, footer, header, hgroup,
     menu, nav, output, ruby, section, summary,
     time, mark, audio, video {
+
+        font-family: "Holtwood One SC"; 
+
         margin: 0;
         padding: 0;
         border: 0;
@@ -68,7 +73,7 @@ export default createGlobalStyle`
     } 
     
     h2, h3 {
-      color: black;
+      color: white;
       font-family: var(--heading-font-family);
     }
     h2 {

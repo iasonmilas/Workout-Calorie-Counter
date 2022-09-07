@@ -158,8 +158,18 @@ const RecordList = ({ refetch, setRefetch, activityMap }) => {
   );
 };
 const RecordDiv = styled.div`
-left: 30vw;
+left: 40vw;
+background-color: white;
+  padding: 1vw;
+  width: 20vw;
+  border-radius: 1vw;
+  opacity: .75;
 
+h2{
+  color: black;
+  font-size: 1.5vw;
+  margin-bottom: 2vw;
+}
 `
 const RecordInput = styled.div`
   #recordactivity {
@@ -173,6 +183,7 @@ const RecordInput = styled.div`
     font-size: 20px;
     display: inline-block;
     align-items: center;
+    margin-bottom: 2vw;
   
     /* background-color: blueviolet; */
   }
@@ -180,7 +191,8 @@ const RecordInput = styled.div`
     padding: 1vw;
 
     /* background-color: brown; */
-    margin: 3vw 1vw 0vw 1vw;
+    margin: 0vw 1vw 0vw 1vw;
+    padding: 3vw 0 0 0;
     
   }
   .record-choice > * {

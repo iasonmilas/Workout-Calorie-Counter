@@ -38,7 +38,7 @@ const SignUp = () => {
   return (
     <SignUpform>
       <div id="signup-form">
-        <p>Fill in the form and join us!</p>
+        <h2>Fill in the form and join us!</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           {errors.apiErr && <p>{errors.apiErr?.message}</p>}
           <div id="form-section">
@@ -189,6 +189,7 @@ margin-left: 10vw;
     padding-right: 5px;
     margin: 0;
     margin-top: 0.4vw;
+
   }
 
   font-size: 1.5vw;
@@ -216,7 +217,7 @@ margin-left: 10vw;
     text-align: center;
   }
 
-  #signup-form p {
+  #signup-form h2 {
       font-size: 40px;
   }
 
@@ -226,20 +227,24 @@ margin-left: 10vw;
 
   #login-info {
     /* background-color: pink; */
-    width: 27vw;
+    width: 50vw;
     border: 1px solid black;
-    margin: 1vw;
+    margin: 1vw 0 1vw 1vw;
     padding: 1vw;
     clear: both;
   }
 
   #user-info {
     /* background-color: orange; */
-    width: 27vw;
+    width: 50vw;
     border: 1px solid black;
-    margin: 1vw;
+    margin: 1vw 1vw 1vw 0;
     padding: 1vw;
     clear: both;
+  }
+  #user-info, #login-info{
+
+    border: .25vw solid white;
   }
 
   @media (max-width: 800px) {
