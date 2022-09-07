@@ -110,7 +110,8 @@ const Login = () => {
 
 const LoginPage = styled.div`
   h3 {
-    margin-bottom: 2vh;
+    margin-bottom: 1vw;
+    font-size: 2.5vw;
   }
   input {
     line-height: 1vw;
@@ -162,9 +163,13 @@ const LoginPage = styled.div`
 
   #login-info {
     margin-bottom: 20px;
+    /* padding: 0 2vw 0 2vw; */
+    padding-top: .75vw;
+    padding-bottom: .75vw;
+    border: .25vw solid white;
   }
   #error-msg {
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
   }
 `;
 

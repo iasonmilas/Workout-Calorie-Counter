@@ -94,7 +94,8 @@ text-align: center;
 
 h1{
   /* margin: 5vh; */
-  font-size: 35px;;
+  font-size: 3vw;
+  
 }
 
 `
@@ -105,17 +106,25 @@ const DecoratedCalculator = styled.div`
   width: 50vw;
   margin-left: 25vw;
   text-align: center;
-  margin-top: 12vh;
-  height: 6vh;
+  margin-top: 12vw;
+  height: 6vw;
   position: absolute;
 
 }
+#result > div{
+  color: white;
+  font-size: 5vw;
+}
 #result > h3{
-  font-size: 1.5vw;
+  font-size: 2vw;
 
 }
+#calculator h2{
+
+  font-size: 2vw;
+}
 #result > div{
-  font-size: 3vw;
+  /* font-size: 3vw; */
   /* background-color: chartreuse; */
   width: 10vw;
   margin-left: 20vw;

@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import moment from "moment";
 import { useForm } from "react-hook-form";
 import styled from "styled-components";
-import { isUserLogin } from "../util";
+import { isUserLogin, fatFormula } from "../util";
 import Records from "./Records";
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import TextField from '@mui/material/TextField';
@@ -54,13 +54,15 @@ const Profile = () => {
   };
   return (
     <CurrentUserInfo>
-      {updateNotification ? <p>{updateNotification}</p> : "" }
+      
       <FormUserInfo onSubmit={handleSubmit(onSubmit)}>
         <div id="user-info">
           {currentUser ? (
             <div>
               <div>
+              {updateNotification ? <p>{updateNotification}</p> : "" }
                 <h2>Your current info</h2>
+                
               </div>
               <div>
                 <label>Username:</label>{" "}
@@ -138,6 +140,9 @@ const Profile = () => {
           <button type="submit">Update</button>
         </div>
       </FormUserInfo>
+      <div id="fat-calculator">
+      <FatCalculator />
+      </div>
       <div id="workouts">
       <TopDailyWorkout />
       <ReocrdByDate />
@@ -193,6 +198,19 @@ const ReocrdByDate = () => {
     </div>
   );
 }
+//cssupdate
+const FatCalculator = () => {
+  const { currentUser } = useContext(CurrentUserContext);
+  const [result, setResult] = useState();
+  return (
+    <>
+    {result ? result : ""}
+    <button onClick={() => {
+      setResult(fatFormula(currentUser.weight, currentUser.height, currentUser.age));
+    }}>Calculate Body Fat</button>
+  </>
+  )
+}
 
 const TopDailyWorkout = () => {
   const { currentUser } = useContext(CurrentUserContext);
@@ -218,6 +236,20 @@ const CurrentUserInfo = styled.div`
 width: 80vw;
 margin-left: 10vw;
 
+#fat-calculator{
+  position: absolute;
+  top: 8vw;
+  left: 5vw;
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  
+}
+#fat-calculator button{
+  font-size: .75vw;
+
+}
+
 #workouts{
   /* background-color: aqua; */
   display: flex;
@@ -237,6 +269,8 @@ border-color: whitesmoke;
 
   margin-top: 1vw;
   margin-bottom: 1vw;
+  color: black;
+  font-size: 1.5vw;
 }
 #workouts > div{
 
