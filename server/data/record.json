@@ -1,0 +1,15 @@
+[
+    {
+        "userId": "",
+        "date": "2022-08-26",
+        "totalCalorie": 3000,
+        "fat": 5,
+        "workouts": [
+            {
+                "activtyId": "",
+                "duration": 120
+            }
+        ]
+    }
+    
+]
